@@ -24,7 +24,7 @@ export default function MyApp({ Component, pageProps }) {
     }, []);
 
     const onLogin = async (fb) => {
-        let token = await fb.getIdToken(false);
+        let token = await fb.getIdToken(true);
         let { data: p } = await axios.post(`/api/auth/place`, undefined, { headers: { authorization: `bearer ${token}` } });
         let { data: l } = await axios.get(`/api/place`, { headers: { authorization: `bearer ${token}` } });
 
