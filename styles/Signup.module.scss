@@ -1,0 +1,71 @@
+@use 'variables.module.scss' as vars;
+
+.page {
+    height: 100vh;
+    background: linear-gradient(80deg, #8CD8F4, #738DE0);
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+}
+
+.form {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 15px;
+        text-align: center;
+        color: red;
+        margin-bottom: 20px;
+    }
+
+    div {
+        width: 20%;
+        height: 1px;
+        background-color: white;
+    }
+
+    input {
+        font-size: 15px;
+        margin-top: 40px;
+        width: 30%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 40px;
+    }
+}
+
+.next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        background-color: transparent;
+        border: none;
+    }
+
+    i {
+        border: solid white;
+        border-width: 0 12px 12px 0;
+        display: inline-block;
+        padding: 12px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+}

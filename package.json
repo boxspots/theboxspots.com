@@ -1,0 +1,32 @@
+{
+  "name": "theboxspots.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "firebase": "^9.9.1",
+    "firebase-admin": "^11.0.0",
+    "leaflet": "^1.9.2",
+    "leaflet-defaulticon-compatibility": "^0.1.1",
+    "leaflet-geosearch": "^3.7.0",
+    "nanoid": "^4.0.0",
+    "next": "12.2.3",
+    "pg": "^8.7.3",
+    "qrcode.react": "^3.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-leaflet": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.3",
+    "jsdoc": "^3.6.11",
+    "sass": "^1.54.0"
+  }
+}

@@ -1,0 +1,128 @@
+@use 'variables.module.scss' as vars;
+
+.page {
+    height: 100vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.nav {
+    position: fixed;
+    background-color: transparent;
+    display: flex;
+    width: 100vw;
+    height: 60px;
+    transition: 0.2s;
+    color: white;
+    justify-content: space-around;
+
+    img {
+        height: 60px;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+
+    a:hover {
+        color: vars.$sub-color;
+        transition: 0.2s;
+    }
+
+    &.visible,
+    &:hover {
+        background-color: white;
+        box-shadow: 0 1px 5px gray;
+        color: vars.$primary-color;
+    }
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, vars.$sub-color, vars.$primary-color);
+    color: white;
+    flex-direction: column;
+
+    h1 {
+        font-size: 100px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 30px;
+        margin: 40px 0 70px 0;
+        max-width: 800px;
+        text-align: center;
+    }
+
+    div {
+        display: flex;
+    }
+
+    a {
+        text-align: center;
+        padding: 15px 0;
+        border: none;
+        background: white;
+        color: vars.$primary-color;
+        font-family: 'SUIT', 'sans-serif';
+        font-size: 35px;
+        width: 250px;
+        border-radius: 60px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+            color: vars.$sub-color;
+        }
+    }
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 500px;
+    text-align: center;
+
+    h3 {
+        margin-top: 30px;
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 500px;
+    text-align: center;
+    background: linear-gradient(45deg, vars.$sub-color, vars.$primary-color);
+    color: white;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    h3 {
+        margin-top: 30px;
+    }
+}
+
+.footer {
+    background-color: #426e7e;
+    color: white;
+    text-align: center;
+    padding: 20px
+}

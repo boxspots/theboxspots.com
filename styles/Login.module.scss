@@ -1,0 +1,114 @@
+@use 'variables.module.scss' as vars;
+
+.page {
+    height: 100vh;
+    display: flex;
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.border {
+    width: 40%;
+    height: 1px;
+    background-color: gray;
+}
+
+.login {
+    width: 65vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 20px;
+        color: gray;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+        width: 100%;
+        align-items: center;
+
+        input {
+            font-size: 15px;
+            margin-bottom: 40px;
+            width: 50%;
+            background-color: #def0f7;
+            padding: 20px;
+            border-radius: 40px;
+        }
+
+        button {
+            font-size: 15px;
+            border: 1px solid vars.$sub-color;
+            background-color: white;
+            color: vars.$sub-color;
+            padding: 20px 0px;
+            width: 20%;
+            border-radius: 40px;
+            font-weight: bold;
+            transition: 0.2s;
+
+            &:hover {
+                background-color: vars.$sub-color;
+                color: white;
+            }
+        }
+    }
+}
+
+.error {
+    color: red;
+}
+
+.signup {
+    color: white;
+    width: 35vw;
+    background: linear-gradient(80deg, #8CD8F4, #738DE0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        width: 60%;
+        margin-top: 20px;
+    }
+
+    a {
+        font-size: 15px;
+        background-color: white;
+        color: black;
+        padding: 20px 0px;
+        width: 40%;
+        border-radius: 40px;
+        text-align: center;
+        margin-top: 30px;
+        font-weight: bold;
+        box-shadow: 0 1px 10px #738DE0;
+    }
+}
