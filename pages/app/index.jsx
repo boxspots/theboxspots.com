@@ -6,7 +6,7 @@ import Map from '../../components/app/map';
 import Settings from '../../components/app/settings';
 import SiteContext from '../../lib/site-context';
 
-const tabs = [<Dashboard />, <Map />, <Settings />];
+const tabs = [<Dashboard key={0} />, <Map key={1} />, <Settings key={2} />];
 
 export default function App() {
     let [tab, setTab] = useState(0);
