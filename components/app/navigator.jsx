@@ -5,7 +5,7 @@ import styles from '../../styles/App.module.scss';
 import { getAuth, signOut } from 'firebase/auth'
 import { firebaseApp } from "../../lib/firebase";
 
-const tabs = ["Dashboard", "Map", "Events", "Settings"];
+const tabs = ["Dashboard", "Map", "Settings"];
 
 export default function Navigator({ tab, setTab }) {
     let { place, setPlace, setPageTitle } = useContext(SiteContext);
