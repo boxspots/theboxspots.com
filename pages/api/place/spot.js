@@ -1,11 +1,20 @@
-import { createSpot, editSpot, getAuth, getMap } from "../../../lib/db";
+import { createSpot, editSpot, getAuth, getMap, getSpot } from "../../../lib/db";
 
 export default function handler(req, res) {
     switch (req.method) {
+        case 'GET': GET(req, res); break;
         case 'POST': POST(req, res); break;
 
         default: res.status(405).end();
     }
+}
+
+// Get spot
+async function GET(req, res) {
+    // TODO - auth and save in history
+    let spot = await getSpot(req.body.sid);
+
+    res.status(200).json(spot);
 }
 
 // Create spot
