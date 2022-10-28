@@ -12,7 +12,7 @@ export default function handler(req, res) {
 // Get spot
 async function GET(req, res) {
     // TODO - auth and save in history
-    let spot = await getSpot(req.body.sid);
+    let spot = await getSpot(req.query.sid);
 
     res.status(200).json(spot);
 }

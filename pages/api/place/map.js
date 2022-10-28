@@ -1,11 +1,20 @@
-import { createMap, getAuth } from "../../../lib/db";
+import { createMap, getAuth, getMap } from "../../../lib/db";
 
 export default function handler(req, res) {
     switch (req.method) {
+        case 'GET': GET(req, res); break;
         case 'POST': POST(req, res); break;
 
         default: res.status(405).end();
     }
+}
+
+// Get map
+async function GET(req, res) {
+    // TODO - auth and save history
+    let map = await getMap(req.query.mid);
+
+    res.status(200).json(map);
 }
 
 // Create map
