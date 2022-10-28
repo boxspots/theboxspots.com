@@ -7,7 +7,7 @@ import { firebaseApp } from '../../lib/firebase';
 import { nanoid } from 'nanoid';
 import http from '../../lib/http';
 import { useRouter } from 'next/router';
-import QRCode from 'qrcode.react';
+import QRCode, { QRCodeCanvas } from 'qrcode.react';
 
 export default function Map() {
     const LLMap = dynamic(() => import("./llmap"), { ssr: false });
@@ -200,9 +200,9 @@ export default function Map() {
                     <button>Save</button>
 
                     <p className={styles.cancel} onClick={leaveOverlay}>Cancel</p>
-                    <QRCode
+                    <QRCodeCanvas
                         id="qr-code"
-                        value={maps[mapIndex].spots[editSpotOverlay].id}
+                        value={maps[mapIndex].spots[editSpotOverlay].id + ""}
                         size={50}
                         className={styles.qr}
                         title="Download QR Code"
